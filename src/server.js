@@ -10,7 +10,13 @@ const io = require("socket.io")(server, {
     }
 })
 
-const port = process.env.port || 7000;
+const port = process.env.PORT || 8080;
+
+
+app.get('',(req,res)=>{
+    res.send('welcone ');
+});
+
 
 const users = [];
 const activeUsers = new Set();
